@@ -61,17 +61,34 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'steve_at_213.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+
+    # MySQL Local
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'steve_at_213',
+    #     'USER': 'admin',
+    #     'PASSWORD': 'wWdX@D2e',  # 1Password / MySQL Local admin
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '3306',
+    # }
+
+    # MySQL Heroku
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': ' heroku_1ce0078efff863c ',
+        'USER': ' bc60a910538c44',
+        'PASSWORD': '3b855daa ',
+        'HOST': ' us-cdbr-east-06.cleardb.net ',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
