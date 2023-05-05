@@ -83,10 +83,11 @@ DATABASES = {
     # MySQL Heroku
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_1ce0078efff863c',
-        'USER': 'bc60a910538c44',
-        'PASSWORD': '3b855daa',
-        'HOST': 'us-cdbr-east-06.cleardb.net',
+        'NAME': 'fy7q3mb7ztgd0jnc',
+        'USER': 'vqkkarsmzd5uba3p',
+        'PASSWORD': 'pooj0kwloh8v2qts',
+        'HOST': 'cis9cbtgerlk68wl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
     }
 }
 
