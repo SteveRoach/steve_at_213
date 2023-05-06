@@ -1,9 +1,15 @@
 from pathlib import Path
+import environ
 import os
+
+
+env = environ.Env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -65,31 +71,17 @@ WSGI_APPLICATION = 'steve_at_213.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-
-    # MySQL Local
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'steve_at_213',
-    #     'USER': 'admin',
-    #     'PASSWORD': 'wWdX@D2e',  # 1Password / MySQL Local admin
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '3306',
-    # }
-
-    # MySQL Heroku
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'fy7q3mb7ztgd0jnc',
-        'USER': 'vqkkarsmzd5uba3p',
-        'PASSWORD': 'pooj0kwloh8v2qts',
-        'HOST': 'cis9cbtgerlk68wl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        'PORT': '3306',
+        'ENGINE': env('MYSQL_DB_ENGINE'),
+        'NAME': env('MYSQL_DB_NAME'),
+        'USER': env('MYSQL_DB_USER'),
+        'PASSWORD': env('MYSQL_DB_PASSWORD'),
+        'HOST': env('MYSQL_DB_HOST'),
+        'PORT': env('MYSQL_DB_PORT'),
     }
 }
+
+print('ENGINE: ', env('MYSQL_DB_NAME'))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
