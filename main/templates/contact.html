@@ -30,12 +30,12 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center align-items-center">
             <div class="col">
-                <form method="POST" action='contact'>
+                <form class="m-1 p-2" method="POST" action='contact'>
                     {% csrf_token %}
 
-                    {{ form.as_p }}
+                    {{ form }}
 
                     <button>Submit</button>
                 </form>
