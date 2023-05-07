@@ -1,0 +1,11 @@
+.bg-handyman {
+  background-color: var(--handyman-main-colour) !important;
+}
+
+.bg-upcycle {
+  background-color: var(--upcycle-main-colour) !important;
+}
+
+.bg-special {
+  background-color: var(--special-main-colour) !important;
+}

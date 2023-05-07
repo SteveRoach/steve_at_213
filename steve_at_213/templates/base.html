@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Steve @ 213">
+        <meta name="author" content="Steve Roach">
+        <title>{% block title %}{% endblock %}</title>
+        {% include 'project_css_config.html' %}
+        {% include 'project_css_external.html' %}
+        <link href="{% static 'css/project_css_local.css' %}" rel="stylesheet" />
+        {% block app-css %}{% endblock %}
+        {% block page-css %}{% endblock %}
+        <link rel="shortcut icon" href="{% static 'favicon/favicon-16x16.png' %}"/>
+        <link href="{% static 'css/project_fonts.css' %}" rel="stylesheet" />
+    </head>
+    <body class="page-background">
+        {% include 'header.html' %}
+        {% block main %}{% endblock %}
+        {% include 'footer.html' %}
+        {% include 'project_js.html' %}
+        {% block app-js %}{% endblock %}
+        {% block page-js %}{% endblock %}
+    </body>
+</html>

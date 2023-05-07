@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Steve @ 213{% endblock %}
+{% block page-css %}<link href="{% static 'main/css/contact.css' %}" rel="stylesheet"/>{% endblock %}
+{% block main %}
+<main>
+    <h2 class="text-center page-name">Contact</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 border-top mb-2"></div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8 d-flex align-items-center">
+                <h4>Follow me on Facebook</h4>
+            </div>
+            <div class="col-2">
+                <a class="fb-link float-start" target="_blank" title="follow me on facebook" href="https://www.facebook.com/profile.php?id=100089291311305">
+                    <img alt="Follow me on facebook" src="{% static 'main/images/f_logo_RGB-Blue_58.png' %}" border=0 width="60" height="60">
+                </a>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 border-bottom mt-2"></div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method="POST" action='contact'>
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
