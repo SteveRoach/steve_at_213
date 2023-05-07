@@ -2,7 +2,6 @@ from pathlib import Path
 import environ
 import os
 
-
 env = environ.Env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -15,19 +14,19 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%(ylqi7=$jeg2d+08siq=n9juzv!98x8%28is2j$2s=8-!bpj#'
+SECRET_KEY = 'django-insecure-t0()@h1*+^t!qi2^%@3xjf=d+8@g9acx^q83u#-(7!s*vrss9*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'steve-at-213.herokuapp.com',
-]
+ALLOWED_HOSTS = []
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Application definition
 
 INSTALLED_APPS = [
+    'main',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +37,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -52,7 +50,10 @@ ROOT_URLCONF = 'steve_at_213.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR,'steve_at_213/templates'),
+            os.path.join(BASE_DIR, 'main/templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,16 +73,14 @@ WSGI_APPLICATION = 'steve_at_213.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': env('MYSQL_DB_ENGINE'),
-        'NAME': env('MYSQL_DB_NAME'),
-        'USER': env('MYSQL_DB_USER'),
-        'PASSWORD': env('MYSQL_DB_PASSWORD'),
-        'HOST': env('MYSQL_DB_HOST'),
-        'PORT': env('MYSQL_DB_PORT'),
+        'ENGINE': os.environ.get('MYSQL_DB_ENGINE'),
+        'NAME': os.environ.get('MYSQL_DB_NAME'),
+        'USER': os.environ.get('MYSQL_DB_USER'),
+        'PASSWORD': os.environ.get('MYSQL_DB_PASSWORD'),
+        'HOST': os.environ.get('MYSQL_DB_HOST'),
+        'PORT': os.environ.get('MYSQL_DB_PORT'),
     }
 }
-
-print('ENGINE: ', env('MYSQL_DB_NAME'))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -101,6 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -116,15 +116,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'steve_at_213\static'),
+]

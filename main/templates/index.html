@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Steve @ 213{% endblock %}
+{% block page-css %}<link href="{% static 'main/css/index.css' %}" rel="stylesheet" />{% endblock %}
+{% block main %}
+  <main>
+    <div class="album py-2">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col mx-auto card-width">
+            <div class="card shadow-sm bg-handyman p-3">
+              <img class="card-img" src="{% static 'main/images/001b_f_480x640.JPG' %}">
+              <h5 class="card-title mt-2 mb-0 text-center fw-bold" style="height: 2.5rem;">Handyman Jobs</h5>
+            </div>
+          </div>
+          <div class="col mx-auto card-width">
+            <div class="card shadow-sm bg-upcycle p-3">
+              <img class="card-img" src="{% static 'main/images/004c_f_480x640.JPG' %}">
+              <h5 class="card-title mt-2 mb-0 text-center fw-bold" style="height: 2.5rem;">Upcycled Builds (TBD)</h5>
+            </div>
+          </div>
+          <div class="col mx-auto card-width">
+            <div class="card shadow-sm bg-special p-3">
+              <img class="card-img" src="{% static 'main/images/jade_rabbit_2_480x640.JPG' %}">
+              <h5 class="card-title mt-2 mb-0 text-center fw-bold" style="height: 2.5rem;">Special Projects (TBD)</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
+{% block page-js %}<script src="{% static 'main/js/index.js' %}"></script>{% endblock %}
