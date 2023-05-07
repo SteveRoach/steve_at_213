@@ -1,0 +1,90 @@
+body {
+  font-family: var(--normal-font);
+}
+
+h1 {
+  font-family: var(--title-font);
+  color: white;
+  font-size: calc(3rem + 7vw);
+}
+
+h2 {
+  color: white;
+  font-size: calc(1.5rem + 4vw);
+}
+
+h3 {
+  color: white;
+  font-size: calc(1.25rem + 3vw);
+}
+
+h4 {
+  color: white;
+  font-size: calc(1rem + 2vw);
+}
+
+.normal-text {
+  color: white;
+  font-size: calc(0.7rem + 1.5vw);
+  margin-bottom: 1em;
+}
+
+a {
+  color: #CCC;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  background-color: white;
+}
+
+#go-to-top-button {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--go-to-top-button-colour); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  font-weight: bold;
+}
+
+#go-to-top-button:hover {
+  background-color: var(--go-to-top-button-colour-hover);
+}
+
+.page-background {
+  background-color: var(--page-background-colour) !important;
+}
+
+.card-width {
+  padding: 0 10vw 5vw 10vw;
+}
+
+a.logo-anchor {
+  background-color: var(--logo-colour);
+}
+
+a.logo-anchor:hover {
+  background-color: var(--logo-colour-hover);
+}
+
+@media (min-width: 576px) {
+  .card-width {
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
