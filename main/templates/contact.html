@@ -29,15 +29,16 @@
             <div class="col-1"></div>
         </div>
     </div>
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
+    <div class="container mt-5">
+        <div class="row text-center">
             <div class="col">
+                <h5>Send me a message or a question</h5>
                 <form class="m-1 p-2" method="POST" action='contact'>
                     {% csrf_token %}
 
                     {{ form }}
 
-                    <button>Submit</button>
+                    <input class="btn btn-secondary" type="submit" value="&nbsp;Send&nbsp;">
                 </form>
             </div>
         </div>

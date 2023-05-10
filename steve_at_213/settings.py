@@ -24,7 +24,13 @@ ALLOWED_HOSTS = [
     'steve-at-213.herokuapp.com',
 ]
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# Config email
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # Application definition
 
@@ -133,3 +139,34 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'steve_at_213/static'),
     os.path.join(BASE_DIR, 'main/static'),
 ]
+
+# Logging Config
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    # Formatters
+    'formatters': {
+        'f': {'()': 'pythonjsonlogger.jsonlogger.JsonFormatter',
+              'format': '[%(filename)s:%(lineno)s - %(funcName)20s] %(asctime)s %(message)s',
+              'datefmt': '%H:%M:%S'
+              },
+    },
+    # Handlers
+    'handlers': {
+        'h': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'formatter': 'f',
+            'filename': 'D:/logs/debug.log',
+            'mode': 'w',  # Write mode - wipes log between runs
+        },
+    },
+    # Loggers
+    'loggers': {
+        'root': {
+            'handlers': ['h'],
+            'propagate': True,
+            'level': 'DEBUG'
+        },
+    },
+}

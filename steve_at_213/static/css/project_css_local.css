@@ -23,6 +23,11 @@ h4 {
   font-size: calc(1rem + 2vw);
 }
 
+h5 {
+  color: white;
+  font-size: calc(0.8rem + 1.2vw);
+}
+
 .normal-text {
   color: white;
   font-size: calc(0.7rem + 1.5vw);
