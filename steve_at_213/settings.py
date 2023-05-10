@@ -157,7 +157,7 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'formatter': 'f',
-            'filename': 'D:/logs/debug.log',
+            'filename': os.environ.get('LOG_DIRECTORY'),
             'mode': 'w',  # Write mode - wipes log between runs
         },
     },
