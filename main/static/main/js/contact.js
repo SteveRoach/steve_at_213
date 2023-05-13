@@ -19,4 +19,8 @@ $(document).ready(function(){
 
        $("#sendingModal").modal('show');
     });
+
+    $("#sendingModal").on('shown', function(){
+        $('body').css('position', 'fixed');
+    });
 });

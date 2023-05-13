@@ -2,8 +2,7 @@
 {% load static %}
 {% block title %}Steve @ 213{% endblock %}
 {% block page-css %}<link href="{% static 'main/css/contact.css' %}" rel="stylesheet"/>{% endblock %}
-{% block main %}
-<!-- Modals -->
+{% block modals %}
 <div class="modal-box">
     <div class="modal fade" id="sendingModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="sendingModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -34,6 +33,8 @@
         </div>
     </div>
 </div>
+{% endblock %}
+{% block main %}
 <main>
     <h2 class="text-center page-name">Contact</h2>
     <div class="container">
@@ -74,6 +75,6 @@
             </div>
         </div>
     </div>
-</main>js
+</main>
 {% endblock %}
 {% block page-js %}<script src="{% static 'main/js/contact.js' %}"></script>{% endblock %}

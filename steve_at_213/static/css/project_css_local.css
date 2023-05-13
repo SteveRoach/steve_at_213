@@ -10,27 +10,27 @@ h1 {
 
 h2 {
   color: white;
-  font-size: calc(1.5rem + 4vw);
+  font-size: calc(2.5rem + 4vw);
 }
 
 h3 {
   color: white;
-  font-size: calc(1.25rem + 3vw);
+  font-size: calc(2rem + 3vw);
 }
 
 h4 {
   color: white;
-  font-size: calc(1rem + 2vw);
+  font-size: calc(1.8rem + 2.5vw);
 }
 
 h5 {
   color: white;
-  font-size: calc(0.8rem + 1.2vw);
+  font-size: calc(1.4rem + 2vw);
 }
 
 .normal-text {
   color: white;
-  font-size: calc(0.7rem + 1.5vw);
+  font-size: calc(1rem + 1.5vw);
   margin-bottom: 1em;
 }
 
