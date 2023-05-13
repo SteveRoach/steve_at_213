@@ -54,7 +54,7 @@
                 <form class="m-1 p-2" method="POST" action='contact'>
                     {% csrf_token %}
 
-                    {{ form }}
+                    {{ form.as_p }}
 
                     <input id="submit-button" class="btn btn-primary" type="submit" value="&nbsp;Send&nbsp;">
                 </form>
@@ -64,3 +64,4 @@
 </main>
 {% endblock %}
 {% block page-js %}<script src="{% static 'main/js/contact.js' %}"></script>{% endblock %}
+
