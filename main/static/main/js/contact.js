@@ -6,7 +6,6 @@ $(document).ready(function(){
     if(contact_form_submitted == 'true'){
        console.log('submitted');
 
-       $("#sendingModal").modal('hide');
        $("#sentModal").modal('show');
 
         contact_form_submitted = 'false';
@@ -17,10 +16,8 @@ $(document).ready(function(){
         contact_form_submitted = 'true';
         localStorage.setItem("contactFormSubmitted", contact_form_submitted);
 
-       $("#sendingModal").modal('show');
-    });
-
-    $("#sendingModal").on('shown', function(){
-        $('body').css('position', 'fixed');
+        $("#submit-button").removeClass('btn-primary');
+        $("#submit-button").addClass('btn-warning');
+        $("#submit-button").val('Sending...');
     });
 });

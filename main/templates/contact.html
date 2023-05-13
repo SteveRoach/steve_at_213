@@ -4,20 +4,6 @@
 {% block page-css %}<link href="{% static 'main/css/contact.css' %}" rel="stylesheet"/>{% endblock %}
 {% block modals %}
 <div class="modal-box">
-    <div class="modal fade" id="sendingModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="sendingModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="modal-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3 class="title">Sending...</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal-box">
     <div class="modal fade" id="sentModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="sentModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -70,7 +56,7 @@
 
                     {{ form }}
 
-                    <input class="btn btn-secondary" type="submit" value="&nbsp;Send&nbsp;">
+                    <input id="submit-button" class="btn btn-primary" type="submit" value="&nbsp;Send&nbsp;">
                 </form>
             </div>
         </div>
