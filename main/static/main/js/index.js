@@ -16,4 +16,9 @@ function on_scroll() {
 function go_to_top() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-} 
+}
+
+//var contact_form_submitted = 'false';
+//localStorage.setItem("contactFormSubmitted", contact_form_submitted);
+
+//console.log(contact_form_submitted);

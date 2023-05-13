@@ -3,6 +3,37 @@
 {% block title %}Steve @ 213{% endblock %}
 {% block page-css %}<link href="{% static 'main/css/contact.css' %}" rel="stylesheet"/>{% endblock %}
 {% block main %}
+<!-- Modals -->
+<div class="modal-box">
+    <div class="modal fade" id="sendingModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="sendingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="title">Sending...</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-box">
+    <div class="modal fade" id="sentModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="sentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-icon">
+                        <i class="fas fa-envelope-circle-check"></i>
+                    </div>
+                    <h3 class="title">Sent</h3>
+                    <p class="description">Your message has been sent - I'll get back to you as soon as I can.</p>
+                    <button class="btn" data-bs-dismiss="modal" aria-hidden="true">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <main>
     <h2 class="text-center page-name">Contact</h2>
     <div class="container">
@@ -43,5 +74,6 @@
             </div>
         </div>
     </div>
-</main>
+</main>js
 {% endblock %}
+{% block page-js %}<script src="{% static 'main/js/contact.js' %}"></script>{% endblock %}
