@@ -39,8 +39,6 @@ $(document).ready(function(){
 
         console.groupEnd(); // Close the "on submit" group
 
-        alert('x');
-
         // Submit
         this.submit();
     });
