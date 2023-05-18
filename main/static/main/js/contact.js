@@ -1,30 +1,31 @@
-$(document).ready(function(){
-    console.log = function() {} // Comment this line to turn on logging
+// Set current debug level for the script - determines what is output to the
+let debug_level = LOG_DEBUG;        // Levels defined in ~\steve_at_213\static\js\common.js
 
-    console.group('contact.js - ready');
+$(document).ready(function(){
+    log("contact.js", "group start", LOG_INFO);
 
     var form_errors = $('.errorlist').length;
 
-    console.log("form_errors: " + form_errors);
+    log("form_errors: " + form_errors, "log", LOG_DEBUG);
 
     contact_form_submitted = localStorage.getItem("contactFormSubmitted");
 
-    console.log("contact_form_submitted: " + contact_form_submitted);
+    log("contact_form_submitted: " + contact_form_submitted, "log", LOG_DEBUG);
 
     if(contact_form_submitted == 'true' && form_errors == 0){
-        console.group('submitted && form_errors = 0');
+        log('submitted && form_errors = 0', "group start", LOG_DEBUG);
 
         $("#sentModal").modal('show');
 
         contact_form_submitted = 'false';
         localStorage.setItem("contactFormSubmitted", contact_form_submitted);
 
-        console.groupEnd(); // Close the "submitted && form_errors = 0" group
+        log('submitted && form_errors = 0', "group end", LOG_DEBUG);
     }
 
     $('form').submit(function(e)
     {
-        console.group('on submit');
+        log('on submit', "group start", LOG_DEBUG);
 
         // Stop submit
         e.preventDefault();
@@ -37,11 +38,11 @@ $(document).ready(function(){
         $('#submit-button').val("Sending...");
         $('#submit-button').prop('disabled', true);
 
-        console.groupEnd(); // Close the "on submit" group
+        log('on submit', "group end", LOG_DEBUG);
 
         // Submit
         this.submit();
     });
 
-    console.groupEnd(); // Close the "contact.js - ready" group
+    log("contact.js", "group end", LOG_INFO);
 });

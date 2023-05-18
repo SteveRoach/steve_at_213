@@ -21,7 +21,7 @@
         {% block main %}{% endblock %}
         {% include 'footer.html' %}
         {% include 'project_js.html' %}
-        {% block app-js %}{% endblock %}
+        <script src="{% static 'js/common.js' %}"></script>
         {% block page-js %}{% endblock %}
         {% block modals %}{% endblock %}
     </body>

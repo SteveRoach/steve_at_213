@@ -9,3 +9,34 @@
 .bg-special {
   background-color: var(--special-main-colour) !important;
 }
+
+.card {
+    padding: 20px 20px 2.5em 20px;
+}
+.card-title {
+    font-size: 2rem;
+}
+
+a:hover {
+    display: block;
+    background-color: transparent;
+}
+
+@media (min-width: 576px) {
+    .card {
+        padding: 15px 15px 4em 15px;
+    }
+    .card-title {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        padding: 15px 15px 2em 15px;
+    }
+    .card-title {
+        font-size: 1.7rem;
+    }
+}
+

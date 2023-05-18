@@ -3,31 +3,37 @@
 {% block title %}Steve @ 213{% endblock %}
 {% block page-css %}<link href="{% static 'main/css/index.css' %}" rel="stylesheet" />{% endblock %}
 {% block main %}
-  <main>
-    <div class="album py-2">
-      <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<main>
+  <div class="album py-2">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div class="col mx-auto card-width">
-            <div class="card shadow-sm bg-handyman p-3">
-              <img class="card-img" src="{% static 'main/images/001b_f_480x640.jpg' %}">
-              <h5 class="card-title mt-2 mb-0 text-center fw-bold" style="height: 1.5rem;">Handyman Jobs</h5>
-            </div>
+            <a href="handyman">
+              <div class="card shadow-sm bg-handyman">
+                <img class="card-img" src="{% static 'main/images/001b_f_480x640.jpg' %}">
+                <p class="card-title mt-2 mb-0 text-center fw-bold" style="height: 1.5rem;">Handyman Jobs</p>
+              </div>
+            </a>
           </div>
           <div class="col mx-auto card-width">
-            <div class="card shadow-sm bg-upcycle p-3">
-              <img class="card-img" src="{% static 'main/images/004c_f_480x640.jpg' %}">
-              <h5 class="card-title mt-2 mb-0 text-center fw-bold" style="height: 1.5rem;">Upcycled Builds</h5>
-            </div>
+            <a href="#">
+              <div class="card shadow-sm bg-upcycle">
+                <img class="card-img" src="{% static 'main/images/004c_f_480x640.jpg' %}">
+                <p class="card-title mt-2 mb-0 text-center fw-bold" style="height: 1.5rem;">Upcycled Builds</p>
+              </div>
+            </a>
           </div>
           <div class="col mx-auto card-width">
-            <div class="card shadow-sm bg-special p-3">
-              <img class="card-img" src="{% static 'main/images/jade_rabbit_2_480x640.jpg' %}">
-              <h5 class="card-title mt-2 mb-0 text-center fw-bold" style="height: 1.5rem;">Special Projects</h5>
-            </div>
+            <a href="#">
+              <div class="card shadow-sm bg-special">
+                <img class="card-img" src="{% static 'main/images/jade_rabbit_2_480x640.jpg' %}">
+                <p class="card-title mt-2 mb-0 text-center fw-bold" style="height: 1.5rem;">Special Projects</p>
+              </div>
+            </a>
           </div>
-        </div>
       </div>
     </div>
-  </main>
+  </div>
+</main>
 {% endblock %}
 {% block page-js %}<script src="{% static 'main/js/index.js' %}"></script>{% endblock %}
