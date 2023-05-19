@@ -12,25 +12,18 @@ $(document).ready(function(){
         dataType: 'json',
         success: function(data){
             log("ajax|success", "group start", LOG_INFO);
-            log("data: " + JSON.stringify(data), "log", LOG_DEBUG);
+            log("data: " + JSON.stringify(data.data), "log", LOG_DEBUG);
 
             $.each(data.data, function(index, value){
-                log("index: " + index, LOG_ERROR);
-                log("value.col1_id: " + value.col1_id, LOG_ERROR);
-                log("value.col1_name: " + value.col1_name, LOG_ERROR);
-                log("value.col5_id: " + value.col5_id, LOG_ERROR);
-                log("value.col5_name: " + value.col5_name, LOG_ERROR);
+                log("value: " + value.title, "log", LOG_ERROR);
 
                 jobs_grid += '<tr>';
-                jobs_grid += '<td><button type="button" class="btn btn-light" onclick="return grid_click(\'' + value.col1_id + '\')"><span class="d-flex align-items-center justify-content-center">' + value.col1_name + '</span></button></td>';
+                jobs_grid += '<td>' + value.title + '</td>';
                 jobs_grid += '</tr>';
             });
+            log("jobs_grid: " + jobs_grid, "log", LOG_ERROR);
 
-            jobs_grid += '<tr><th></th></tr>';
-
-            log("jobs_grid: " + jobs_grid, LOG_ERROR);
-
-            $("#grid_table").append(jobs_grid);
+            $("#jobs-grid").append(jobs_grid);
 
             log("ajax|success", "group end", LOG_INFO);
         },

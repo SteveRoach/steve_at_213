@@ -27,7 +27,10 @@ def get_jobs_grid(request):
         logger.debug(f"jobs_grid:")
         logger.debug(jobs_grid)
 
-    response = "response"
+    response = {'data': jobs_grid}
+
+    if log_level <= logging.DEBUG:
+        logger.debug(f"output: {response}")
 
     if log_level <= logging.INFO:
         logger.info("END")
