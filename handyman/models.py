@@ -1,9 +1,11 @@
+from cloudinary.models import CloudinaryField
 from django.db import models
 
 
 class Job(models.Model):
     title = models.CharField(max_length=100)
-    thumbnail_url = models.CharField(max_length=500, null=True)
+    image = CloudinaryField('image', null=True)
+    display_order = models.IntegerField(null=True)
 
 
 """
