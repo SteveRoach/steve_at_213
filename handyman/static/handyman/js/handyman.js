@@ -15,12 +15,21 @@ $(document).ready(function(){
             log("data: " + JSON.stringify(data.data), "log", LOG_DEBUG);
 
             $.each(data.data, function(index, value){
-                log("value: " + value.title, "log", LOG_ERROR);
+                log("value.title: " + value.title, "log", LOG_ERROR);
+                log("value.image: " + value.image, "log", LOG_ERROR);
 
-                jobs_grid += '<tr>';
-                jobs_grid += '<td>' + value.title + '</td>';
-                jobs_grid += '</tr>';
+                jobs_grid += '<div class="col mx-auto card-width">';
+                jobs_grid += '   <a href="#">';
+                jobs_grid += '      <div class="card shadow-sm bg-handyman">';
+                jobs_grid += '         <img class="card-img square-image" src="' + value.image + '">';
+                jobs_grid += '         <div class="card-title card-img-overlay d-flex align-items-center justify-content-center">';
+                jobs_grid += '            <button class="btn btn-secondary bg-secondary" style="--bs-bg-opacity: .7; width: fit-content; display: inline;">' + value.title + '</button>';
+                jobs_grid += '         </div>';
+                jobs_grid += '      </div>';
+                jobs_grid += '   </a>';
+                jobs_grid += '</div>';
             });
+
             log("jobs_grid: " + jobs_grid, "log", LOG_ERROR);
 
             $("#jobs-grid").append(jobs_grid);

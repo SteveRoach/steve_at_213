@@ -21,7 +21,7 @@ def get_jobs_grid(request):
     if log_level <= logging.INFO:
         logger.info("START")
 
-    jobs_grid = sql.get_list_of_batches()
+    jobs_grid = sql.get_list_of_jobs()
 
     if log_level <= logging.DEBUG:
         logger.debug(f"jobs_grid:")

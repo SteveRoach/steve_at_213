@@ -1,3 +1,53 @@
 table {
     width: 100%;
 }
+
+.bg-handyman {
+  background-color: var(--handyman-main-colour) !important;
+}
+
+.card {
+    padding: 20px;
+}
+.card-title>button {
+    font-size: 8vw;
+}
+
+a:hover {
+    display: block;
+    background-color: transparent;
+}
+
+.square-image{
+  width: 100%;
+  object-fit: cover; /* Required to prevent the image from stretching, use the object-position property to adjust the visible area */
+  aspect-ratio: 1/1;
+}
+
+@media (min-width: 576px) {
+    .card {
+        padding: 15px;
+    }
+    .card-title>button{
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 15px;
+    }
+    .card-title>button{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .card {
+        padding: 15px;
+    }
+    .card-title>button{
+        font-size: 1.7rem;
+    }
+}
+

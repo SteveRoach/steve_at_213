@@ -6,7 +6,7 @@ from utils.database import *
 logger, log_level = setup_logger(__name__)
 
 
-def get_list_of_batches() -> []:
+def get_list_of_jobs() -> []:
     if log_level <= logging.INFO:
         logger.info("START")
 
@@ -14,8 +14,10 @@ def get_list_of_batches() -> []:
         with connection.cursor() as cursor:
             cursor.execute(
                 """
-                SELECT title 
+                SELECT title
+                      ,image
                 FROM handyman_job
+                ORDER BY display_order
                 """
             )
 

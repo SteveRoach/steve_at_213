@@ -11,10 +11,10 @@
 }
 
 .card {
-    padding: 20px 20px 2.5em 20px;
+    padding: 20px;
 }
-.card-title {
-    font-size: 2rem;
+.card-title>button {
+    font-size: 8vw;
 }
 
 a:hover {
@@ -24,18 +24,27 @@ a:hover {
 
 @media (min-width: 576px) {
     .card {
-        padding: 15px 15px 4em 15px;
+        padding: 15px;
     }
-    .card-title {
-        font-size: 1.7rem;
+    .card-title>button{
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 15px;
+    }
+    .card-title>button{
+        font-size: 1.2rem;
     }
 }
 
 @media (min-width: 992px) {
     .card {
-        padding: 15px 15px 2em 15px;
+        padding: 15px;
     }
-    .card-title {
+    .card-title>button{
         font-size: 1.7rem;
     }
 }
