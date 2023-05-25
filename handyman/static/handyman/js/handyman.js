@@ -24,13 +24,12 @@ $(document).ready(function(){
                 jobs_grid += '    <div class="card shadow-sm bg-handyman">';
                 jobs_grid += '        <img class="card-img square-image" src="' + value.image + '">';
                 jobs_grid += '        <div class="card-title card-img-overlay text-center" style="">';
-                jobs_grid += '            <div class="card-text-wrap d-flex h-100">';
-                jobs_grid += '                <h2 class="align-self-center w-100">' + title + '</h2>';
+                jobs_grid += '            <div class="card-text-wrap bg-secondary d-flex h-100 opacity-50">';
                 jobs_grid += '            </div>';
                 jobs_grid += '        </div>';
                 jobs_grid += '        <div class="card-title card-img-overlay text-center" style="">';
                 jobs_grid += '            <a href="#">';
-                jobs_grid += '                <div class="card-text-wrap bg-secondary d-flex h-100 opacity-25">';
+                jobs_grid += '                <div class="card-text-wrap d-flex h-100">';
                 jobs_grid += '                    <h2 class="align-self-center w-100">' + title + '</h2>';
                 jobs_grid += '                </div>';
                 jobs_grid += '            </a>';
