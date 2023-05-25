@@ -19,14 +19,21 @@ $(document).ready(function(){
                 log("value.image: " + value.image, "log", LOG_ERROR);
 
                 jobs_grid += '<div class="col mx-auto card-width">';
-                jobs_grid += '   <a href="#">';
-                jobs_grid += '      <div class="card shadow-sm bg-handyman">';
-                jobs_grid += '         <img class="card-img square-image" src="' + value.image + '">';
-                jobs_grid += '         <div class="card-title card-img-overlay d-flex align-items-center justify-content-center">';
-                jobs_grid += '            <button class="btn btn-secondary bg-secondary" style="--bs-bg-opacity: .7; width: fit-content; display: inline;">' + value.title + '</button>';
-                jobs_grid += '         </div>';
-                jobs_grid += '      </div>';
-                jobs_grid += '   </a>';
+                jobs_grid += '    <div class="card shadow-sm bg-handyman">';
+                jobs_grid += '        <img class="card-img square-image" src="' + value.image + '">';
+                jobs_grid += '        <div class="card-title card-img-overlay text-center" style="">';
+                jobs_grid += '            <div class="card-text-wrap d-flex h-100">';
+                jobs_grid += '                <h2 class="align-self-center w-100">' + value.title + '</h2>';
+                jobs_grid += '            </div>';
+                jobs_grid += '        </div>';
+                jobs_grid += '        <div class="card-title card-img-overlay text-center" style="">';
+                jobs_grid += '            <a href="#">';
+                jobs_grid += '                <div class="card-text-wrap bg-secondary d-flex h-100">';
+                jobs_grid += '                    <h2 class="align-self-center w-100">' + value.title + '</h2>';
+                jobs_grid += '                </div>';
+                jobs_grid += '            </a>';
+                jobs_grid += '        </div>';
+                jobs_grid += '    </div>';
                 jobs_grid += '</div>';
             });
 
