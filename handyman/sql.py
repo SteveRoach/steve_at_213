@@ -50,7 +50,7 @@ def get_job(job_id) -> []:
                           ,jd.text
                           ,jd.image_url
                           ,jd.image_width
-                    FROM steve_at_213.handyman_job j INNER JOIN steve_at_213.handyman_jobdetail jd
+                    FROM handyman_job j INNER JOIN handyman_jobdetail jd
                     ON(j.id = jd.job_id)
                     WHERE j.id = {job_id}
                     ORDER BY jd.number
