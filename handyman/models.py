@@ -8,10 +8,11 @@ class Job(models.Model):
     display_order = models.IntegerField(null=True)
 
 
-"""
-class JobDetailLine(models.Model):
-    number = models.IntegerField
-    type = models.CharField(max_length=20)
+class JobDetail(models.Model):
+    number = models.IntegerField(null=False)
+    type = models.CharField(max_length=20, null=False)
     text = models.TextField(null=True)
-    image_url = models.Field
-"""
+    image_url = CloudinaryField('image', null=True)
+    image_width = models.IntegerField(null=True)
+    job = models.ForeignKey(Job, on_delete=models.CASCADE)
+

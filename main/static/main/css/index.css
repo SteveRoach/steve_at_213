@@ -29,10 +29,6 @@ h2 {
   aspect-ratio: 1/1;
 }
 
-a:hover div {
-    opacity: 0.2 !important;
-}
-
 a:active div {
     opacity: 0.2 !important;
 }

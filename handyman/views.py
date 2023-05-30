@@ -37,3 +37,37 @@ def get_jobs_grid(request):
 
     return HttpResponse(json.dumps(response), content_type='application/json')
 
+
+def job(request, job_id):
+    if log_level <= logging.INFO:
+        logger.info("START")
+
+    if log_level <= logging.DEBUG:
+        logger.debug(f"job_id: {job_id}")
+
+    if log_level <= logging.INFO:
+        logger.info("END")
+    return render(request, 'job.html')
+
+
+def get_job(request, job_id):
+    if log_level <= logging.INFO:
+        logger.info("START")
+
+    job = sql.get_job(job_id)
+
+    if log_level <= logging.DEBUG:
+        logger.debug(f"job:")
+        logger.debug(job)
+
+    response = {'data': job}
+
+    if log_level <= logging.DEBUG:
+        logger.debug(f"output: {response}")
+
+    if log_level <= logging.INFO:
+        logger.info("END")
+
+    return HttpResponse(json.dumps(response), content_type='application/json')
+
+

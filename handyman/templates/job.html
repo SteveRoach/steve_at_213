@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Steve @ 213{% endblock %}
+{% block page-css %}<link href="{% static 'handyman/css/job.css' %}" rel="stylesheet" />{% endblock %}
+{% block main %}
+<main>
+  <div class="album py-2">
+    <div class="container">
+      <div class="row">
+        <div id="job-article" class="col">
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
+{% block page-js %}<script src="{% static 'handyman/js/job.js' %}"></script>{% endblock %}

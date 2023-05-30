@@ -1,0 +1,15 @@
+.job-article-text {
+    color: white;
+    font-size: calc(1.2rem + 1.2vw);
+}
+
+.job-article-image {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    ob-article-text {
+        font-size: calc(1.6rem + 1.2vw)
+    }
+}
+

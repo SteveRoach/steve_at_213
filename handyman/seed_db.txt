@@ -1,0 +1,209 @@
+DELETE FROM steve_at_213.handyman_jobdetail;
+DELETE FROM steve_at_213.handyman_job;
+
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Fit Shelves',1,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/005a_f_640x480_x3wnvw.jpg');
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Mount TV',2,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586451/handyman/006a_f_640x480_umh4oz.jpg');
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Reinforce Step',3,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/007a_f_640x480_w2s8do.jpg');
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Mount Appliances',4,' https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/003a_f_480x640_azqzdo.jpg');
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Fit Blinds',5,' https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/002a_f_480x640_pjsiag.jpg');
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Install Garden Hose',6,' https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586451/handyman/001a_f_480x640_czwsvj.jpg');
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Hang Mirror',7,' https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586451/handyman/004a_f_480x640_xewr4j.jpg');
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,1
+      ,'TEXT'
+      ,'I can fit all types of shelves - show me what you''ve got.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Shelves';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,2
+      ,'TEXT'
+      ,'This type of shelf (from Bunnings) comes in a couple of different colours and in several sizes. It looks pretty good and it isn''t too expensive. For light loads, they can be fitted to plasterboard like here.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Shelves';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,3
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/005a_f_640x480_x3wnvw.jpg'
+      ,640
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Shelves';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,4
+      ,'TEXT'
+      ,'For heavier loads, the brackets can be screwed directly into wall studs, or I can make up a backing board like this.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Shelves';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,5
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1685363180/handyman/005b_f_640x480_wcf9rd.jpg'
+      ,640
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Shelves';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,1
+      ,'TEXT'
+      ,'This is a 75" TV with a soundbar on a shelf. I also laid in some cable-tidy conduit for a neat finish.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Mount TV';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,2
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586451/handyman/006a_f_640x480_umh4oz.jpg'
+      ,640
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Mount TV';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,3
+      ,'TEXT'
+      ,'The TV is mounted on a bracket screwed directly into the wall studs. The shelf is carrying a very light load and so is just on plasterboard fixings.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Mount TV';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,1
+      ,'TEXT'
+      ,'This tile step, between the hallway and garage, was getting chipped from all the traffic.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Reinforce Step';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,2
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/007a_f_640x480_w2s8do.jpg'
+      ,640
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Reinforce Step';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,3
+      ,'TEXT'
+      ,'I screwed & glued an aluminium strip on the edge which covered the chips and left a finish much more able to handle the rough treatment.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Reinforce Step';
+

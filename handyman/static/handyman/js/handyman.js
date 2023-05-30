@@ -17,7 +17,9 @@ $(document).ready(function(){
 
             $.each(data.data, function(index, value){
                 title = value.title.replace(/\s+/g, '<br>');
-                log("value.title: " + value.title, "log", LOG_ERROR);
+
+                log("value.id: " + value.id, "log", LOG_ERROR);
+                log("title: " + title, "log", LOG_ERROR);
                 log("value.image: " + value.image, "log", LOG_ERROR);
 
                 jobs_grid += '<div class="col mx-auto card-width">';
@@ -28,7 +30,7 @@ $(document).ready(function(){
                 jobs_grid += '            </div>';
                 jobs_grid += '        </div>';
                 jobs_grid += '        <div class="card-title card-img-overlay text-center" style="">';
-                jobs_grid += '            <a href="#">';
+                jobs_grid += '            <a href="job/' + value.id + '">';
                 jobs_grid += '                <div class="card-text-wrap d-flex h-100">';
                 jobs_grid += '                    <h2 class="align-self-center w-100">' + title + '</h2>';
                 jobs_grid += '                </div>';
