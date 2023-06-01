@@ -4,10 +4,10 @@ DELETE FROM steve_at_213.handyman_job;
 Insert into steve_at_213.handyman_job (title,display_order,image) values ('Fit Shelves',1,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/005a_f_640x480_x3wnvw.jpg');
 Insert into steve_at_213.handyman_job (title,display_order,image) values ('Mount TV',2,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586451/handyman/006a_f_640x480_umh4oz.jpg');
 Insert into steve_at_213.handyman_job (title,display_order,image) values ('Reinforce Step',3,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/007a_f_640x480_w2s8do.jpg');
-Insert into steve_at_213.handyman_job (title,display_order,image) values ('Mount Appliances',4,' https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/003a_f_480x640_azqzdo.jpg');
-Insert into steve_at_213.handyman_job (title,display_order,image) values ('Fit Blinds',5,' https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/002a_f_480x640_pjsiag.jpg');
-Insert into steve_at_213.handyman_job (title,display_order,image) values ('Install Garden Hose',6,' https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586451/handyman/001a_f_480x640_czwsvj.jpg');
-Insert into steve_at_213.handyman_job (title,display_order,image) values ('Hang Mirror',7,' https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586451/handyman/004a_f_480x640_xewr4j.jpg');
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Mount Appliances',4,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/003a_f_480x640_azqzdo.jpg');
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Fit Blinds',5,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/002a_f_480x640_pjsiag.jpg');
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Install Garden Hose',6,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1685534256/handyman/001c_f_640x480_yzoxyn.jpg');
+Insert into steve_at_213.handyman_job (title,display_order,image) values ('Hang Mirror',7,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1685622848/handyman/004a_f_480x640_ujkidd.jpg');
 
 INSERT INTO steve_at_213.handyman_jobdetail
 (
@@ -201,9 +201,423 @@ INSERT INTO steve_at_213.handyman_jobdetail
 SELECT j.id
       ,3
       ,'TEXT'
-      ,'I screwed & glued an aluminium strip on the edge which covered the chips and left a finish much more able to handle the rough treatment.'
+      ,'I glued an aluminium strip on the edge which covered the chips and left a finish much more able to handle the rough treatment.'
       ,NULL
       ,NULL
 FROM steve_at_213.handyman_job j
 WHERE j.title = 'Reinforce Step';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,1
+      ,'TEXT'
+      ,'I can install / mount most appliances. This tumble drier went up on the wall to get it out of the way.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Mount Appliances';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,2
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/003a_f_480x640_azqzdo.jpg'
+      ,480
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Mount Appliances';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,3
+      ,'TEXT'
+      ,'The supplied brackets are screwed directly into the walls studs to take the weight.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Mount Appliances';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,4
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/003b_f_480x640_scgnnp.jpg'
+      ,480
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Mount Appliances';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,5
+      ,'TEXT'
+      ,'I can do most types of plumbing if, say, taps / drains need to be changed. For any electrical work, I can recommend an electrician.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Mount Appliances';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,1
+      ,'TEXT'
+      ,'This outside area is nice but it got too much sun in the afternoon and, sometimes, it got a bit windy. Solution: a couple of roller blinds.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Blinds';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,2
+      ,'TEXT'
+      ,'The blinds come with bungies to hold them down but a more flexible solution was needed. I fitted one with a pulley and line system so that the blind can be secured at any height.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Blinds';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,3
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/002a_f_480x640_pjsiag.jpg'
+      ,480
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Blinds';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,4
+      ,'TEXT'
+      ,'The other one has been fitted with the standard bungies as it needs to be either fully open or fully closed.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Blinds';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,5
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586452/handyman/002b_f_480x640_dzzobi.jpg'
+      ,480
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Blinds';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,6
+      ,'TEXT'
+      ,'This is a great area for lunch now.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Fit Blinds';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,1
+      ,'TEXT'
+      ,'This solves the problem of mounting a retractable garden hose on a weatherboard wall. It needs a strong anchor to take the weight and pulling.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Install Garden Hose';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,2
+      ,'TEXT'
+      ,'Firstly, I made a mounting block. This has many screws for a strong bond and to spread the load.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Install Garden Hose';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,3
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1685534256/handyman/001a_f_480x640_rqv9by.jpg'
+      ,480
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Install Garden Hose';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,4
+      ,'TEXT'
+      ,'Here it is mounted on the wall with the hose bracket.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Install Garden Hose';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,5
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1685534256/handyman/001b_f_640x480_ooklzp.jpg'
+      ,640
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Install Garden Hose';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,6
+      ,'TEXT'
+      ,'And the finished hose.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Install Garden Hose';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,7
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1685534256/handyman/001c_f_640x480_yzoxyn.jpg'
+      ,640
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Install Garden Hose';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,8
+      ,'TEXT'
+      ,'Located so that it can fold back against the wall.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Install Garden Hose';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,1
+      ,'TEXT'
+      ,'This mirror was wanted on the back of a bedroom door.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Hang Mirror';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,2
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1685622848/handyman/004a_f_480x640_ujkidd.jpg'
+      ,480
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Hang Mirror';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,3
+      ,'TEXT'
+      ,'Rather than ruin the effect with brackets, I used very strong double-sided tape - and lots of it.'
+      ,NULL
+      ,NULL
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Hang Mirror';
+
+INSERT INTO steve_at_213.handyman_jobdetail
+(
+    job_id
+   ,number
+   ,type
+   ,text
+   ,image_url
+   ,image_width
+)
+SELECT j.id
+      ,4
+      ,'IMAGE'
+      ,NULL
+      ,'https://res.cloudinary.com/hk5jfbo4b/image/upload/v1684586451/handyman/004b_f_480x640_iwiyuj.jpg'
+      ,480
+FROM steve_at_213.handyman_job j
+WHERE j.title = 'Hang Mirror';
 

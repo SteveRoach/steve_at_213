@@ -2,6 +2,11 @@ h2 {
     font-size: calc(2.5rem + 4vw)
 }
 
+.handyman-text {
+    color: white;
+    font-size: calc(1.2rem + 1.2vw);
+}
+
 .card {
     border-width: 0;
     border-radius: 10%;
@@ -41,6 +46,10 @@ a:active div {
 
 @media (min-width: 768px) {
     h2 {
+        font-size: calc(1.6rem + 1.2vw)
+    }
+
+    .handyman-text {
         font-size: calc(1.6rem + 1.2vw)
     }
 }

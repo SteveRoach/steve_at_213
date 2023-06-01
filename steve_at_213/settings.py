@@ -37,6 +37,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 INSTALLED_APPS = [
     'main',
     'handyman',
+    'upcycle',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

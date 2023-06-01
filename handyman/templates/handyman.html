@@ -4,7 +4,26 @@
 {% block page-css %}<link href="{% static 'handyman/css/handyman.css' %}" rel="stylesheet" />{% endblock %}
 {% block main %}
 <main>
-  <div class="album py-2">
+   <div class="container">
+       <div class="row">
+           <div class="col">
+               <div class="mb-3 handyman-text">
+               Here are some examples of my work. Feel free to browse.
+               </div>
+               <div class="mb-3 handyman-text">
+               I'll take on most handyman jobs - just ask. If I don't think I can handle it, I'm happy to hook you up with someone who can.
+               </div>
+               <div class="mb-4 handyman-text">
+               There are only two things I keep well away from:
+                   <ul>
+                       <li>Electrical work (I'm not qualified).</li>
+                       <li>Gardening (I really don't like it).</li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+   </div>
+   <div class="album py-2">
     <div class="container">
       <div id="jobs-grid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       </div>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Steve @ 213{% endblock %}
+{% block page-css %}<link href="{% static 'css/404.css' %}" rel="stylesheet" />{% endblock %}
+{% block main %}
+<main>
+   <div class="container">
+       <div class="row">
+           <div class="col">
+          <div class="col mx-auto card-width">
+              <div class="card">
+                <img class="card-img" src="https://res.cloudinary.com/hk5jfbo4b/image/upload/v1685653966/steve_at_213/404_lrnaqj.jpg">
+                <div class="card-title card-img-overlay text-center" style="">
+                  <div class="card-text-wrap d-flex h-100">
+                    <h2 class="align-self-center w-100" style="color: black;">Working on it. Honestly.</h2>
+                  </div>
+                </div>
+             </div>
+          </div>
+           </div>
+       </div>
+   </div>
+</main>
+{% endblock %}
+{% block page-js %}<script src="{% static 'js/404.js' %}"></script>{% endblock %}

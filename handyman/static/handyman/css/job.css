@@ -8,7 +8,7 @@
 }
 
 @media (min-width: 768px) {
-    ob-article-text {
+    .job-article-text {
         font-size: calc(1.6rem + 1.2vw)
     }
 }
