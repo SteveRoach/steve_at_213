@@ -3,6 +3,9 @@
 {% block title %}Steve @ 213{% endblock %}
 {% block page-css %}<link href="{% static 'main/css/index.css' %}" rel="stylesheet" />{% endblock %}
 {% block main %}
+<script type="text/javascript">
+  window.onunload = function(){};
+</script>
 <main>
   <div class="album py-2">
     <div class="container">
@@ -63,8 +66,5 @@
     </div>
   </div>
 </main>
-<script type="text/javascript">
-  window.onunload = function(){};
-</script>
 {% endblock %}
 {% block page-js %}<script src="{% static 'main/js/index.js' %}"></script>{% endblock %}
