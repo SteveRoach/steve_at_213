@@ -1,3 +1,6 @@
+// Set current debug level for the script - determines what is output to the
+let debug_level = LOG_DEBUG;        // Levels defined in ~\steve_at_213\static\js\common.js
+
 // Get the button:
 let go_to_top_button = document.getElementById("go-to-top-button");
 
@@ -18,7 +21,25 @@ function go_to_top() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-//var contact_form_submitted = 'false';
-//localStorage.setItem("contactFormSubmitted", contact_form_submitted);
+$(document).ready(function() {
+    log("$(document).ready", "group start", LOG_INFO);
 
-//console.log(contact_form_submitted);
+    $("a").click(function() {
+        log("a click", "group start", LOG_INFO);
+
+        var id = this.id;
+
+        log("id: " + id, "group start", LOG_INFO);
+
+        $("#" + id + " div").removeClass("opacity-50");
+        $("#" + id + " div").addClass("opacity-0");
+
+        window.location.href = id;
+
+        log("a click", "group end", LOG_INFO);
+    });
+
+    log("$(document).ready", "group end", LOG_INFO);
+});
+
+

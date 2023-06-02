@@ -29,10 +29,6 @@ h2 {
   aspect-ratio: 1/1;
 }
 
-a:active div {
-    opacity: 0.2 !important;
-}
-
 @media (min-width: 576px) {
     h2 {
         font-size: calc(1.8rem + 1.8vw)
