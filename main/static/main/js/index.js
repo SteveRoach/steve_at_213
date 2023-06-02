@@ -7,6 +7,12 @@ let go_to_top_button = document.getElementById("go-to-top-button");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {on_scroll()};
 
+window.onpageshow = function(event) {
+  if (event.persisted) {
+      window.location.reload();
+  }
+};
+
 function on_scroll() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     go_to_top_button.style.display = "block";
