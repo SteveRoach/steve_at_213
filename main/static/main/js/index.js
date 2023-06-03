@@ -8,9 +8,21 @@ let go_to_top_button = document.getElementById("go-to-top-button");
 window.onscroll = function() {on_scroll()};
 
 window.onpageshow = function(event) {
-  if (event.persisted) {
-      window.location.reload();
-  }
+    log("onpageshow", "group start", LOG_INFO);
+
+    if( $.browser.safari )
+    {
+        alert('safari');
+
+        if (event.persisted) {
+            //window.location.reload();
+
+            $(".opaque-overlay").removeClass("opacity-0");
+            $(".opaque-overlay").addClass("opacity-50");
+        }
+    }
+
+    log("onpageshow", "group end", LOG_INFO);
 };
 
 function on_scroll() {
