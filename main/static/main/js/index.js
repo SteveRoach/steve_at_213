@@ -12,6 +12,7 @@ window.onpageshow = function(event) {
 
     alert(navigator.userAgent);
 
+    /*
     if( $.browser.safari )
     {
         alert('safari');
@@ -23,6 +24,7 @@ window.onpageshow = function(event) {
             $(".opaque-overlay").addClass("opacity-50");
         }
     }
+    */
 
     log("onpageshow", "group end", LOG_INFO);
 };
