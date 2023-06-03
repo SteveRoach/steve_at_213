@@ -10,12 +10,13 @@ window.onscroll = function() {on_scroll()};
 window.onpageshow = function(event) {
     log("onpageshow", "group start", LOG_INFO);
 
-    alert(navigator.userAgent);
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-    /*
-    if( $.browser.safari )
+    log("isSafari: " + isSafari, "log", LOG_INFO);
+
+    if(isSafari)
     {
-        alert('safari');
+        log("Safari", "log", LOG_INFO);
 
         if (event.persisted) {
             //window.location.reload();
@@ -24,7 +25,6 @@ window.onpageshow = function(event) {
             $(".opaque-overlay").addClass("opacity-50");
         }
     }
-    */
 
     log("onpageshow", "group end", LOG_INFO);
 };
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
         var id = this.id;
 
-        log("id: " + id, "group start", LOG_INFO);
+        log("id: " + id, "log", LOG_INFO);
 
         $("#" + id + " div").removeClass("opacity-50");
         $("#" + id + " div").addClass("opacity-0");
