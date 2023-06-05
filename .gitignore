@@ -7,7 +7,7 @@ db.sqlite3
 media
 
 # collectstatic
-/static
+/staticfiles
 
 # Backup files # 
 *.bak 
@@ -138,3 +138,6 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# Local config
+/config/seed_data

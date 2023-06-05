@@ -201,7 +201,7 @@ INSERT INTO steve_at_213.handyman_jobdetail
 SELECT j.id
       ,3
       ,'TEXT'
-      ,'I glued an aluminium strip on the edge which covered the chips and left a finish much more able to handle the rough treatment.'
+      ,'I glued an aluminium strip on the edge which covered the chips and left a tough finish.'
       ,NULL
       ,NULL
 FROM steve_at_213.handyman_job j
@@ -291,7 +291,7 @@ INSERT INTO steve_at_213.handyman_jobdetail
 SELECT j.id
       ,5
       ,'TEXT'
-      ,'I can do most types of plumbing if, say, taps / drains need to be changed. For any electrical work, I can recommend an electrician.'
+      ,'I can also do most types of basic plumbing, too.'
       ,NULL
       ,NULL
 FROM steve_at_213.handyman_job j
@@ -309,7 +309,7 @@ INSERT INTO steve_at_213.handyman_jobdetail
 SELECT j.id
       ,1
       ,'TEXT'
-      ,'This outside area is nice but it got too much sun in the afternoon and, sometimes, it got a bit windy. Solution: a couple of roller blinds.'
+      ,'This outside area is nice but it was too sunny in the afternoon and, sometimes, it got a bit windy. Solution: a couple of roller blinds.'
       ,NULL
       ,NULL
 FROM steve_at_213.handyman_job j
