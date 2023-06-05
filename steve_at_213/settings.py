@@ -17,7 +17,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = 'django-insecure-t0()@h1*+^t!qi2^%@3xjf=d+8@g9acx^q83u#-(7!s*vrss9*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'main',
     'handyman',
     'upcycle',
+    'special',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -128,19 +129,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'steve_at_213/static'),
+    os.path.join(BASE_DIR, 'main/static'),
+    os.path.join(BASE_DIR, 'handyman/static'),
+    os.path.join(BASE_DIR, 'upcycle/static'),
+    os.path.join(BASE_DIR, 'special/static'),
+]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'steve_at_213/static'),
-    os.path.join(BASE_DIR, 'main/static'),
-]
 
 # Logging Config
 LOGGING = {

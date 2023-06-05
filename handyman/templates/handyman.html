@@ -4,25 +4,34 @@
 {% block page-css %}<link href="{% static 'handyman/css/handyman.css' %}" rel="stylesheet" />{% endblock %}
 {% block main %}
 <main>
-   <div class="container">
+    <h2 class="text-center page-name">Handyman</h2>
+    <div class="container">
        <div class="row">
            <div class="col">
                <div class="mb-3 handyman-text">
-               Here are some examples of my work. Feel free to browse.
+               The links, below, will take you to some examples of my work. Feel free to browse.
                </div>
                <div class="mb-3 handyman-text">
-               I'll take on most handyman jobs - just ask. If I don't think I can handle it, I'm happy to hook you up with someone who can.
+               I'll take on most handyman jobs - just ask. As well as the sort of thing you see below, I can also do the following:
+                   <ul>
+                       <li>Most basic plumbing tasks</li>
+                       <li>Computer / internet setup and trouble-shooting (I've worked with computers for most of my career)</li>
+                   </ul>
                </div>
                <div class="mb-4 handyman-text">
-               There are only two things I keep well away from:
+               There are a couple of things I don't do:
                    <ul>
-                       <li>Electrical work (I'm not qualified).</li>
-                       <li>Gardening (I really don't like it).</li>
+                       <li>Electrical work (I'm not qualified)</li>
+                       <li>Gardening</li>
                    </ul>
+               </div>
+               <div class="mb-4 handyman-text">
+               If you'd like to get in touch, go to the Contact page, <a class="in-page-links" href="/contact">here</a>.
                </div>
            </div>
        </div>
    </div>
+   <h2 class="text-center page-name">Some of my jobs</h2>
    <div class="album py-2">
     <div class="container">
       <div id="jobs-grid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
