@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Steve @ 213{% endblock %}
-{% block page-css %}<link href="{% static 'main/css/about.css' %}" rel="stylesheet"/>{% endblock %}
+{% block page-css %}<link href="{% static 'css/about.css' %}" rel="stylesheet"/>{% endblock %}
 {% block main %}
 <main>
     <h2 class="text-center page-name">About</h2>
-    <img class="rounded mx-auto d-block" src="{% static 'main/images/about_self.png' %}">
+    <img class="rounded mx-auto d-block" src="{% static 'images/about_self.png' %}">
     <div class="m-3">
         <div class="normal-text">This is my personal site. I spent most of my former career working with computers in several
             countries, and across many industries. One of my skills from back then is building websites not unlike
@@ -28,4 +28,4 @@
 </main>
 {% endblock %}
 {% block page-js %}
-<script src="{% static 'main/js/index.js' %}"></script>{% endblock %}
+<script src="{% static 'js/index.js' %}"></script>{% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Steve @ 213{% endblock %}
-{% block page-css %}<link href="{% static 'main/css/contact.css' %}" rel="stylesheet"/>{% endblock %}
+{% block page-css %}<link href="{% static 'css/contact.css' %}" rel="stylesheet"/>{% endblock %}
 {% block modals %}
 <div class="modal-box">
     <div class="modal fade" id="sentModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="sentModalLabel" aria-hidden="true">
@@ -40,7 +40,7 @@
             <div class="col-1"></div>
             <div class="col text-center">
                 <a class="fb-link" target="_blank" title="facebook" href="https://www.facebook.com/profile.php?id=100089291311305">
-                    <img class="fb-logo" alt="Follow me on facebook" src="{% static 'main/images/f_logo_RGB-Blue_58.png' %}" border=0>
+                    <img class="fb-logo" alt="Follow me on facebook" src="{% static 'images/f_logo_RGB-Blue_58.png' %}" border=0>
                 </a>
             </div>
             <div class="col-1"></div>
@@ -67,5 +67,5 @@
     </div>
 </main>
 {% endblock %}
-{% block page-js %}<script src="{% static 'main/js/contact.js' %}"></script>{% endblock %}
+{% block page-js %}<script src="{% static 'js/contact.js' %}"></script>{% endblock %}
 
