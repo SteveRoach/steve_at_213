@@ -54,6 +54,20 @@ function go_to_top() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+function runAnchor(id) {
+    log("a click", "group start", LOG_INFO);
+    log("id: " + id, "log", LOG_INFO);
+
+    $("#" + id + " div").removeClass("opacity-50");
+    $("#" + id + " div").addClass("opacity-0");
+
+    window.location.href = "job/" + id;
+
+    log("a click", "group end", LOG_INFO);
+
+    return false;
+};
+
 $(document).ready(function(){
     log("handyman.js", "group start", LOG_INFO);
 
@@ -63,14 +77,14 @@ $(document).ready(function(){
         dataType: 'json',
         success: function(data){
             log("ajax|success", "group start", LOG_INFO);
-            log("data: " + JSON.stringify(data.data), "log", LOG_DEBUG);
+            //log("data: " + JSON.stringify(data.data), "log", LOG_DEBUG);
 
             $.each(data.data, function(index, value){
                 title = value.title.replace(/\s+/g, '<br>');
 
-                log("value.id: " + value.id, "log", LOG_ERROR);
-                log("title: " + title, "log", LOG_ERROR);
-                log("value.image: " + value.image, "log", LOG_ERROR);
+                //log("value.id: " + value.id, "log", LOG_DEBUG);
+                //log("title: " + title, "log", LOG_DEBUG);
+                //log("value.image: " + value.image, "log", LOG_DEBUG);
 
                 jobs_grid += '<div class="col mx-auto card-width">';
                 jobs_grid += '    <div class="card shadow-sm bg-handyman">';
@@ -81,7 +95,7 @@ $(document).ready(function(){
                 jobs_grid += '            </div>';
                 jobs_grid += '        </div>';
                 jobs_grid += '        <div class="card-title card-img-overlay text-center">';
-                jobs_grid += '            <a href="job/' + value.id + '">';
+                jobs_grid += '            <a href="#" onclick="return runAnchor(' + value.id + ');" >';
                 jobs_grid += '                <div class="card-text-wrap bg-secondary d-flex h-100 opaque-overlay opacity-50">';
                 jobs_grid += '                    <h4 class="align-self-center w-100">' + title + '</h4>';
                 jobs_grid += '                </div>';
@@ -91,7 +105,7 @@ $(document).ready(function(){
                 jobs_grid += '</div>';
             });
 
-            log("jobs_grid: " + jobs_grid, "log", LOG_ERROR);
+            //log("jobs_grid: " + jobs_grid, "log", LOG_DEBUG);
 
             $("#jobs-grid").append(jobs_grid);
 
@@ -104,21 +118,6 @@ $(document).ready(function(){
             log("thrownError: " + JSON.stringify(thrownError), "log", LOG_DEBUG);
             log("ajax|success", "group end", LOG_INFO);
         }
-    });
-
-    $("a").click(function() {
-        log("a click", "group start", LOG_INFO);
-
-        var id = this.id;
-
-        log("id: " + id, "log", LOG_INFO);
-
-        $("#" + id + " div").removeClass("opacity-50");
-        $("#" + id + " div").addClass("opacity-0");
-
-        window.location.href = id;
-
-        log("a click", "group end", LOG_INFO);
     });
 
     log("handyman.js", "group end", LOG_INFO);
