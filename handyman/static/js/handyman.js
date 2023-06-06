@@ -55,15 +55,15 @@ function go_to_top() {
 }
 
 function runAnchor(id) {
-    log("a click", "group start", LOG_INFO);
+    log("runAnchor", "group start", LOG_INFO);
     log("id: " + id, "log", LOG_INFO);
 
-    $("#" + id + " div").removeClass("opacity-50");
-    $("#" + id + " div").addClass("opacity-0");
+    $("#job-" + id + " div").removeClass("opacity-50");
+    $("#job-" + id + " div").addClass("opacity-0");
 
     window.location.href = "job/" + id;
 
-    log("a click", "group end", LOG_INFO);
+    log("runAnchor", "group end", LOG_INFO);
 
     return false;
 };
@@ -95,7 +95,7 @@ $(document).ready(function(){
                 jobs_grid += '            </div>';
                 jobs_grid += '        </div>';
                 jobs_grid += '        <div class="card-title card-img-overlay text-center">';
-                jobs_grid += '            <a href="#" onclick="return runAnchor(' + value.id + ');" >';
+                jobs_grid += '            <a id="job-' + value.id + '" href="#" onclick="return runAnchor(' + value.id + ');" >';
                 jobs_grid += '                <div class="card-text-wrap bg-secondary d-flex h-100 opaque-overlay opacity-50">';
                 jobs_grid += '                    <h4 class="align-self-center w-100">' + title + '</h4>';
                 jobs_grid += '                </div>';
