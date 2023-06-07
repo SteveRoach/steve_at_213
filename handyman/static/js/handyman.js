@@ -11,26 +11,15 @@ var jobs_grid = "";
 var title = "";
 
 /* Cludge:
-    Fixes an issue with Safari. When the back-button is clicked, classes are not
-    restored properly. This is the least intrusive approach. The commented-out reload
-    instruction is the hammer. */
+    When the back-button is clicked, classes are not restored properly. */
 window.onpageshow = function(event) {
     log("onpageshow", "group start", LOG_INFO);
 
-    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    if (event.persisted) {
+        //window.location.reload();
 
-    log("isSafari: " + isSafari, "log", LOG_INFO);
-
-    if(isSafari)
-    {
-        log("Safari", "log", LOG_INFO);
-
-        if (event.persisted) {
-            //window.location.reload();
-
-            $(".opaque-overlay").removeClass("opacity-0");
-            $(".opaque-overlay").addClass("opacity-50");
-        }
+        $(".opaque-overlay").removeClass("opacity-0");
+        $(".opaque-overlay").addClass("opacity-50");
     }
 
     log("onpageshow", "group end", LOG_INFO);
