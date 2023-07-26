@@ -75,7 +75,7 @@ $(document).ready(function(){
                 //log("title: " + title, "log", LOG_DEBUG);
                 //log("value.image: " + value.image, "log", LOG_DEBUG);
 
-                jobs_grid += '<div class="col mx-auto card-width">';
+                jobs_grid += '<div class="col card-width">';
                 jobs_grid += '    <div class="card shadow-sm bg-handyman">';
                 jobs_grid += '        <img class="card-img square-image" src="' + value.image + '">';
                 jobs_grid += '        <div class="card-title card-img-overlay text-center">';
