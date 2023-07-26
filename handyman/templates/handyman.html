@@ -1,43 +1,51 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Steve @ 213{% endblock %}
-{% block page-css %}<link href="{% static 'css/handyman.css' %}" rel="stylesheet" />{% endblock %}
+{% block page-css %}
+<link href="{% static 'css/handyman.css' %}" rel="stylesheet"/>{% endblock %}
 {% block main %}
 <main>
     <h2 class="text-center page-name">Handyman</h2>
     <div class="container">
-       <div class="row">
-           <div class="col">
-               <div class="mb-3 handyman-text">
-               The links, below, will take you to some examples of my work. Feel free to browse.
-               </div>
-               <div class="mb-3 handyman-text">
-               I'll take on most handyman jobs - just ask. As well as the sort of thing you see below, I can also do the following:
-                   <ul>
-                       <li>Most basic plumbing tasks</li>
-                       <li>Computer / internet setup and trouble-shooting (I've worked with computers for most of my career)</li>
-                   </ul>
-               </div>
-               <div class="mb-4 handyman-text">
-               There are a couple of things I don't do:
-                   <ul>
-                       <li>Electrical work (I'm not qualified)</li>
-                       <li>Gardening</li>
-                   </ul>
-               </div>
-               <div class="mb-4 handyman-text">
-               If you'd like to get in touch, go to the Contact page, <a class="in-page-links" href="/contact">here</a>.
-               </div>
-           </div>
-       </div>
-   </div>
-   <h2 class="text-center page-name">Some of my jobs</h2>
-   <div class="album py-2">
-    <div class="container">
-      <div id="jobs-grid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      </div>
+        <div class="row">
+            <div class="col">
+                <div class="mb-3 handyman-text">
+                    The links, below, will take you to some examples of my work. Feel free to browse.
+                </div>
+                <div class="mb-3 handyman-text">
+                    I'll take on most handyman jobs - just ask. I used to work with one of the major local real estate
+                    agents helping to maintain rental properties, so I'm used to a wide range of work. I'll only turn
+                    down a job if I'm not confident my skills are up to it. I charge $50 and hour plus materials. As
+                    well as the sort of thing you see below, I can also do the following:
+                    <ul>
+                        <li>Most basic plumbing tasks</li>
+                        <li>Computer / internet setup and trouble-shooting (I've worked with computers for most of my
+                            career)
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-4 handyman-text">
+                    There are a couple of things I don't do:
+                    <ul>
+                        <li>Electrical work (I'm not qualified)</li>
+                        <li>Gardening</li>
+                    </ul>
+                </div>
+                <div class="mb-4 handyman-text">
+                    If you'd like to get in touch, go to the Contact page, <a class="in-page-links"
+                                                                              href="{% url 'main-contact' %}">here</a>.
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+    <h2 class="text-center page-name">Some of my jobs</h2>
+    <div class="album py-2">
+        <div class="container">
+            <div id="jobs-grid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            </div>
+        </div>
+    </div>
 </main>
 {% endblock %}
-{% block page-js %}<script src="{% static 'js/handyman.js' %}"></script>{% endblock %}
+{% block page-js %}
+<script src="{% static 'js/handyman.js' %}"></script>{% endblock %}
