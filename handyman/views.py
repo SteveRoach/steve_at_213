@@ -54,13 +54,16 @@ def get_job(request, job_id):
     if log_level <= logging.INFO:
         logger.info("START")
 
+    job_name = sql.get_job_name(job_id)
+
     job = sql.get_job(job_id)
 
     if log_level <= logging.DEBUG:
         logger.debug(f"job:")
         logger.debug(job)
 
-    response = {'data': job}
+    data = {'job_name': job_name, 'job': job}
+    response = {'data': data}
 
     if log_level <= logging.DEBUG:
         logger.debug(f"output: {response}")

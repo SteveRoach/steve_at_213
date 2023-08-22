@@ -7,6 +7,7 @@ let go_to_top_button = document.getElementById("go-to-top-button");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {on_scroll()};
 
+var job_name = "";
 var job_article = "";
 
 function on_scroll() {
@@ -40,8 +41,15 @@ $(document).ready(function(){
         success: function(data){
             log("ajax|success", "group start", LOG_INFO);
             log("data: " + JSON.stringify(data.data), "log", LOG_DEBUG);
+            log("job_name: " + data.data.job_name[0].title, "log", LOG_DEBUG);
 
-            $.each(data.data, function(index, value){
+            job_name += '<h2 class="text-center page-name">';
+            job_name += data.data.job_name[0].title;
+            job_name += '</h2>';
+
+            $("#job-article").append(job_name);
+
+            $.each(data.data.job, function(index, value){
                 log("index: " + index, "log", LOG_DEBUG);
                 log("value.type: " + value.type, "log", LOG_DEBUG);
 

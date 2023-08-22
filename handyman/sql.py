@@ -38,6 +38,35 @@ def get_list_of_jobs() -> []:
     return data
 
 
+def get_job_name(job_id) -> []:
+    if log_level <= logging.INFO:
+        logger.info("START")
+
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute(
+                f"""
+                    SELECT j.title
+                    FROM handyman_job j
+                    WHERE j.id = {job_id}
+                """
+            )
+
+            data = fetchall_into_dict(cursor)
+
+    except ConnectionError as e:
+        if log_level <= logging.ERROR:
+            logger.error(f"e: {e}")
+
+    if log_level <= logging.DEBUG:
+        logger.debug(f"data:")
+        logger.debug(data)
+
+    if log_level <= logging.INFO:
+        logger.info("END")
+
+    return data
+
 def get_job(job_id) -> []:
     if log_level <= logging.INFO:
         logger.info("START")
