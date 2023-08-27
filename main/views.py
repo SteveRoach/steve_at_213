@@ -38,12 +38,14 @@ def contact(request):
             name = form.cleaned_data['name']
             subject = form.cleaned_data['subject']
             email = form.cleaned_data['email']
+            phone = form.cleaned_data['phone']
             message = form.cleaned_data['message']
 
             html = render_to_string('emails/contact_form.html', {
                 'name': name,
                 'subject': subject,
                 'email': email,
+                'phone': phone,
                 'message': message,
             })
 

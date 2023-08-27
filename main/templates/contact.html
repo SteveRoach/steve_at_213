@@ -23,48 +23,6 @@
 {% block main %}
 <main>
     <h2 class="text-center page-name">Contact</h2>
-    <div class="container">
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="col-10 border-top mb-2"></div>
-            <div class="col-1"></div>
-        </div>
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="col">
-                <h5>Follow me:</h5>
-            </div>
-            <div class="col-1"></div>
-        </div>
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="col text-center">
-                <a class="fb-link" target="_blank" title="facebook" href="https://www.facebook.com/profile.php?id=100089291311305">
-                    <img class="fb-logo" alt="Follow me on facebook" src="https://res.cloudinary.com/hk5jfbo4b/image/upload/v1686029275/main/f_logo_RGB-Blue_58_leitq9.png" border=0>
-                </a>
-            </div>
-            <div class="col-1"></div>
-        </div>
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="col-10 border-bottom mt-2"></div>
-            <div class="col-1"></div>
-        </div>
-    </div>
-    <div class="container mt-5">
-        <div class="row text-center">
-            <div class="col">
-                <h5>Send me a message or a question</h5>
-                <form class="m-1 p-2" method="POST" action='contact'>
-                    {% csrf_token %}
-
-                    {{ form.as_p }}
-
-                    <input id="submit-button" class="btn btn-primary" type="submit" value="&nbsp;Send&nbsp;">
-                </form>
-            </div>
-        </div>
-    </div>
     <div class="container mt-5">
         <div class="row">
             <div class="col-1"></div>
@@ -85,7 +43,50 @@
         </div>
         <div class="row">
             <div class="col-1"></div>
+            <div class="col-10 border-bottom mt-2"></div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col">
+                <h5>Send me a message, ask a question, or request a job:</h5>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row text-center">
+            <div class="col">
+                <form class="m-1 p-2" method="POST" action='contact'>
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+                    <input id="submit-button" class="btn btn-primary" type="submit" value="&nbsp;Send&nbsp;">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-1"></div>
             <div class="col-10 border-top mb-2"></div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col">
+                <h5>Follow me:</h5>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col text-center">
+                <a class="fb-link" target="_blank" title="facebook" href="https://www.facebook.com/profile.php?id=100089291311305">
+                    <img class="fb-logo" alt="Follow me on facebook" src="https://res.cloudinary.com/hk5jfbo4b/image/upload/v1686029275/main/f_logo_RGB-Blue_58_leitq9.png" border=0>
+                </a>
+            </div>
             <div class="col-1"></div>
         </div>
     </div>

@@ -1,6 +1,13 @@
 // Set current debug level for the script - determines what is output to the
 let debug_level = LOG_DEBUG;        // Levels defined in ~\steve_at_213\static\js\common.js
 
+// Keep Heroku Dyno awake
+var http = require("http");
+
+setInterval(function() {
+    http.get("http://steve-at-213.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
+
 // Get the button:
 let go_to_top_button = document.getElementById("go-to-top-button");
 

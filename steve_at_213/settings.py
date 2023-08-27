@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'handyman',
     'upcycle',
     'special',
+    'phonenumber_field',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
