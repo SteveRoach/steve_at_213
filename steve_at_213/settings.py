@@ -17,7 +17,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = 'django-insecure-t0()@h1*+^t!qi2^%@3xjf=d+8@g9acx^q83u#-(7!s*vrss9*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -37,8 +37,6 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 INSTALLED_APPS = [
     'main',
     'handyman',
-    'upcycle',
-    'special',
     'phonenumber_field',
     'django.contrib.admin',
     'django.contrib.auth',

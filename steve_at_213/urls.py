@@ -5,6 +5,5 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', include('main.urls')),
     path('handyman/', include('handyman.urls')),
-    path('upcycle/', include('upcycle.urls')),
     path('special/', include('special.urls')),
 ]

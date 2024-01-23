@@ -1,6 +1,6 @@
 import logging
 
-block = 2
+block = 1
 
 # Fine Grained
 if block == 1:
