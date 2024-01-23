@@ -50,7 +50,7 @@ function runAnchor(id) {
     $("#job-" + id + " div").removeClass("opacity-50");
     $("#job-" + id + " div").addClass("opacity-0");
 
-    window.location.href = "job/" + id;
+    window.location.href = "handyman/job/" + id;
 
     log("runAnchor", "group end", LOG_INFO);
 
